@@ -2,7 +2,7 @@
 
 ## Github Public Repositories Listing 
 
-Welcome to the Repositories Listing Page project! This project aims to provide a clean and organized web page for listing GitHub public repositories.
+Welcome to the Repositories Listing Page project! This project aims to provide a clean and organized web page for listing GitHub public repositories. [Check the webpage here](https://ankursharma1302.github.io/GithubPulicRepoListing/)
 
 ## Features
 
