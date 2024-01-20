@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.searchBar{
+    width: 100%;
+    height: 60px;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eeeeee40;
+}
+
+.search{
+    position: relative;
+    width: 340px;
+    height: 40px;
+    background: #fff;
+    border-radius: 60px;
+    transition: 0.5s;
+    box-shadow: 0 0 0 2px #bbb;
+    overflow: hidden;
+}
+
+
+
+.search .icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background: #111;
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.search .icon::before{
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    transform: translate(-4px, -4px);
+}
+
+.search .icon::after{
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 10px;
+    background: #fff;
+    transform: translate(6px, 6px) rotate(315deg);
+}
+
+.search .input{
+    position: relative;
+    width: 300px;
+    height: 40px;
+    left: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search .input input{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+.clear{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 13px;
+    height: 13px;
+    right: 13px;
+    /* background: #ff0; */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clear::before{
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 13px;
+    background: #222;
+    transform: rotate(45deg);
+}
+
+.clear::after{
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 13px;
+    background: #222;
+    transform: rotate(315deg);
+}
+
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
+/* ####################### Profile ################### */
+.profile{
+    padding: 50px 0px;
+    background: #f5f5f7;
+}
+
+.profile-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile h2{
+    font-size: 2.5rem;
+}
+
+.profile p{
+    font-size: 1rem;
+    color: #333;
+}
+
+.profile a{
+    color: #111;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.profile p.extra{
+    font-size: 0.8rem;
+    letter-spacing: 1.2px;
+    color: #111;
+}
+
+
+
+.profile-img{
+    flex: 1 1 200px;
+    padding: 30px;
+    /* border: 2px solid red; */
+}
+
+.profile-img img{
+    display: block;
+    height: 200px;
+    max-width: 100%;
+    margin: auto;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+.profile-text{
+    flex: 1 1 200px;
+    padding: 30px;
+    margin: auto;
+}
+
+
+/* ###########Public Repo############## */
+.repository{
+    padding: 4rem 0 5rem 0;
+    background: #eeeeee40;
+    /* width: 95%; */
+    margin:  auto;
+    /* border: 2px solid black; */
+}
+.repository h2{
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.repo-wrapper{
+   
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto,1fr);
+    grid-gap: 2rem;
+    /* border: 2px solid red; */
+    
+}
+
+.repo-card{
+    padding: 1rem;
+    box-shadow: 0 0 .4rem .4rem rgba(0, 0, 0, 0.2);
+}
+.repo-card a{
+    color: #111;
+    font-size: 1.4rem;
+    text-decoration: none;
+    font-weight: 700;
+}
+.repo-card .repo-card-heading{
+    margin-bottom: 0.5rem;
+}
+
+.repo-card .repo-desc{
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.repo-card .repo-program{
+    background: #bbbbbb88;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    padding: 0.3rem;
+}
+
+/* #############pagination############### */
+.listPage{
+    padding: 10px;
+    
+    text-align: center;
+    list-style: none;
+    
+}
+
+.listPage li{
+    background-color: #bbbbbb88;
+    padding: 1rem;
+    display: inline-block;
+    margin: 2rem 0.6rem;
+    cursor: pointer;
+}
+
+.listPage .active{
+    background-color: #111111BD;
+    color: #fff;
+    
+}
+
+
+
+/* ##############media query################# */
+@media (max-width: 500px){
+    .profile{
+        padding: 50px 0px;
+        background: #f5f5f7;
+    }
+    
+    .profile-wrapper{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    .profile h2{
+        font-size: 1.6rem;
+    }
+    
+    .profile p{
+        font-size: 0.8rem;
+        color: #333;
+    }
+    
+    .profile a{
+        color: #111;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.8rem;
+    }
+    
+    .profile p.extra{
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        color: #111;
+    }
+    
+    
+    
+    .profile-img{
+        flex: 1 1 200px;
+        padding: 30px;
+        /* border: 2px solid red; */
+    }
+    
+    .profile-img img{
+        display: block;
+        height: 200px;
+        max-width: 100%;
+        margin: auto;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 50%;
+    }
+    
+    .profile-text{
+        flex: 1 1 200px;
+        padding: 30px;
+        margin: auto;
+    }
+    .repository{
+        padding: 4rem 0 5rem 0;
+        background: #eeeeee40;
+        /* width: 95%; */
+        margin:  auto;
+        /* border: 2px solid black; */
+    }
+    .repository h2{
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 400;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+        color: #333;
+    }
+    
+    .repo-wrapper{
+       
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(auto,1fr);
+        grid-gap: 2rem;
+        /* border: 2px solid red; */
+        
+    }
+    
+    .repo-card{
+        padding: 1rem;
+        box-shadow: 0 0 .4rem .4rem rgba(0, 0, 0, 0.2);
+    }
+    .repo-card a{
+        color: #111;
+        font-size: 1.4rem;
+        text-decoration: none;
+        font-weight: 700;
+    }
+    .repo-card .repo-card-heading{
+        margin-bottom: 0.5rem;
+    }
+    
+    .repo-card .repo-desc{
+        color: #333;
+        font-size: 0.9rem;
+    }
+    
+    .repo-card .repo-program{
+        background: #bbbbbb88;
+        border-radius: 5px;
+        font-size: 0.8rem;
+        padding: 0.3rem;
+    }
+
+    .listPage li{
+        background-color: #bbbbbb88;
+        padding: 1rem;
+        display: inline-block;
+        margin: 2rem 0.3rem;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 814px){
+    .profile{
+        padding: 50px 0px;
+        background: #f5f5f7;
+    }
+    
+    .profile-wrapper{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    .profile h2{
+        font-size: 2rem;
+    }
+
+    .repository{
+        padding: 4rem 0 5rem 0;
+        background: #eeeeee40;
+        /* width: 95%; */
+        margin:  auto;
+        /* border: 2px solid black; */
+    }
+    .repository h2{
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 400;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+        color: #333;
+    }
+    
+    .repo-wrapper{
+       
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(auto,1fr);
+        grid-gap: 2rem;
+        /* border: 2px solid red; */
+        
+    }
+    
+    
+    
+    
+}
+
+/* landscape mode */
+@media (orientation: landscape) and (max-height: 500px){
+    
+    
+}
